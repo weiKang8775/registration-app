@@ -1,0 +1,50 @@
+<div class="courses">
+  <div class="school-year">
+    <div class="school-year__group" *ngFor="let sy of schoolYears">
+      <input type="radio" name="schoolyear" class="school-year__input" [value]="sy.year" [id]="sy.year">
+      <label class="school-year__label" [for]="sy.year">{{sy.year}}</label>
+    </div>
+  </div>
+  <div class="semester">
+    <div class="semester__group">
+      <input type="radio" name="semester" value="fall" id="fall" class="semester__input">
+      <label for="fall" class="semester__label">
+        <span class="semester__btn"></span>
+        Fall
+      </label>
+    </div>
+    <div class="semester__group">
+      <input type="radio" name="semester" value="winter" id="winter" class="semester__input">
+      <label for="winter" class="semester__label">
+        <span class="semester__btn"></span>
+        Winter
+      </label>
+    </div>
+    <div class="semester__group">
+      <input type="radio" name="semester" value="summer" id="summer" class="semester__input">
+      <label for="summer" class="semester__label">
+        <span class="semester__btn"></span>
+        Summer
+      </label>
+    </div>
+    <div class="semester__group">
+      <input type="radio" name="semester" value="spring" id="spring" class="semester__input">
+      <label for="spring" class="semester__label">
+        <span class="semester__btn"></span>
+        Spring
+      </label>
+    </div>
+  </div>
+  <div class="courses__list-container">
+    <ul class="courses__list">
+      <li class="courses__item" *ngFor="let course of courses">
+        <mat-card class="courses__card">
+          <mat-card-title>{{ course.name}}</mat-card-title>
+          <mat-card-subtitle>{{ course.description }}</mat-card-subtitle>
+        </mat-card>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
